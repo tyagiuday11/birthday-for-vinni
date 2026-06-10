@@ -90,6 +90,53 @@ display:none;
 </head>
 
 <body>
+<!-- AUTH SCREEN -->
+
+<div
+id="authScreen"
+class="fixed inset-0 z-[9999] flex items-center justify-center bg-gradient-to-b from-pink-100 to-rose-100 px-6"
+>
+
+    <div class="bg-white p-8 rounded-3xl shadow-2xl w-full max-w-sm text-center">
+
+        <div class="text-6xl mb-4">
+            ❤️
+        </div>
+
+        <h1 class="text-3xl font-bold text-pink-500">
+Before You Enter ❤️
+</h1>
+
+       <p class="text-gray-600 mb-6">
+Answer one question...
+
+What does your stupid boyfriend call you? 😘
+</p>
+
+        <input
+            type="text"
+            id="secretAnswer"
+            placeholder="Enter the secret phrase..."
+            class="w-full border-2 border-pink-200 rounded-xl p-3 outline-none focus:border-pink-500"
+        >
+
+        <button
+            onclick="verifyBaby()"
+            class="mt-5 w-full bg-pink-500 text-white py-3 rounded-xl"
+        >
+            Enter ❤️
+        </button>
+
+        <p
+            id="errorMsg"
+            class="hidden text-red-500 mt-3"
+        >
+            Oops... That's not what my baby would type 😘
+        </p>
+
+    </div>
+
+</div>
 
 <!-- Floating Hearts -->
 <div id="hearts"></div>
@@ -378,6 +425,50 @@ I Love Youuuu ❤️🫂😘🌍
 </div>
 
 <script>
+
+function verifyBaby() {
+
+    const answer =
+        document
+            .getElementById("secretAnswer")
+            .value
+            .trim();
+
+    if(answer === "Vinni the Cuty") {
+
+        document
+            .getElementById("authScreen")
+            .style.display = "none";
+
+        document
+            .getElementById("websiteContent")
+            .classList.remove("hidden");
+
+        const song =
+            document.getElementById("birthdaySong");
+
+        if(song){
+            song.play();
+        }
+
+    } else {
+
+        document
+            .getElementById("errorMsg")
+            .classList.remove("hidden");
+    }
+}
+document
+.getElementById("secretAnswer")
+.addEventListener("keypress", function(e){
+
+    if(e.key === "Enter"){
+        verifyBaby();
+    }
+
+});
+
+
     //Song Play
     const startBtn = document.getElementById("startBtn");
 const song = document.getElementById("birthdaySong");
