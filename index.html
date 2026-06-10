@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Happy Birthday My Love ❤️</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<audio id="birthdaySong">
+    <source src="public/music/our-song.mp3" type="audio/mpeg">
+</audio>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(
+180deg,
+#fff6f8,
+#ffe5d4
+);
+overflow-x:hidden;
+}
+
+/* Floating Hearts */
+
+.heart{
+position:fixed;
+pointer-events:none;
+z-index:0;
+animation:floatHeart linear infinite;
+opacity:.7;
+}
+
+@keyframes floatHeart{
+
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-120px);
+opacity:0;
+}
+
+}
+
+/* Glass Card */
+
+.glass{
+backdrop-filter:blur(12px);
+background:rgba(255,255,255,.55);
+border:1px solid rgba(255,255,255,.3);
+}
+
+/* Love Meter */
+
+.progress{
+width:0%;
+transition:4s ease;
+}
+
+.gallery::-webkit-scrollbar{
+display:none;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+<div id="hearts"></div>
+
+<!-- HERO -->
+
+<section class="min-h-screen flex items-center justify-center px-5 relative z-10">
+
+<div class="max-w-md w-full text-center">
+
+<div class="relative">
+
+<img
+src="public/images/IMG_1042.jpeg"
+class="w-52 h-52 mx-auto rounded-full object-cover border-4 border-white shadow-2xl"
+/>
+
+</div>
+
+<h1 class="mt-8 text-5xl font-bold text-pink-500">
+Happy Birthday ❤️
+</h1>
+
+<h2 class="mt-2 text-xl text-gray-700">
+My Beautiphool Babyy😘
+</h2>
+
+<p class="mt-6 text-gray-600 leading-7">
+Thank you for always standing beside me,
+believing in me and loving me through every phase of life.
+</p>
+
+<button
+id="startBtn"
+class="mt-8 bg-pink-500 text-white px-8 py-4 rounded-full shadow-xl active:scale-95 transition"
+>
+Start Our Story ❤️
+</button>
+
+</div>
+
+</section>
+<div
+id="loadingMessage"
+class="hidden fixed inset-0 bg-pink-50 flex items-center justify-center z-50"
+>
+
+<div class="text-center">
+
+<div class="text-5xl mb-4">
+❤️
+</div>
+
+<h2 class="text-2xl font-semibold text-pink-500">
+Preparing Something Special... <br> [wait 3sec babiu]
+</h2>
+
+</div>
+
+</div>
+
+<!-- GALLERY -->
+
+<section id="gallery" class="py-20 px-4">
+
+<h2 class="text-center text-4xl font-bold text-pink-500 mb-10">
+Our Memories ❤️
+</h2>
+
+<div class="gallery flex gap-5 overflow-x-auto snap-x snap-mandatory pb-5">
+
+<img src="public/images/Snapchat-1021797414.JPEG" class="snap-center shrink-0 w-80 rounded-3xl shadow-xl">
+
+<img src="public/images/IMG_0342.jpeg" class="snap-center shrink-0 w-80 rounded-3xl shadow-xl">
+
+<img src="public/images/Snapchat-1635541751.JPEG" class="snap-center shrink-0 w-80 rounded-3xl shadow-xl">
+
+<img src="public/images/Snapchat-2041014449.JPEG" class="snap-center shrink-0 w-80 rounded-3xl shadow-xl">
+
+<img src="public/images/IMG_1046.jpeg" class="snap-center shrink-0 w-80 rounded-3xl shadow-xl">
+
+<img src="public/images/IMG_1062 2.jpeg" class="snap-center shrink-0 w-80 rounded-3xl shadow-xl">
+
+<img src="public/images/Snapchat-1770536582.JPEG" class="snap-center shrink-0 w-80 rounded-3xl shadow-xl">
+
+<img src="public/images/IMG_0348.jpeg" class="snap-center shrink-0 w-80 rounded-3xl shadow-xl">
+
+<img src="public/images/Snapchat-2041014449.JPEG" class="snap-center shrink-0 w-80 rounded-3xl shadow-xl">
+
+<img src="public/images/IMG_0343.jpeg" class="snap-center shrink-0 w-80 rounded-3xl shadow-xl">
+
+<img src="public/images/Snapchat-1711374083.JPEG" class="snap-center shrink-0 w-80 rounded-3xl shadow-xl">
+
+<img src="public/images/IMG_1060 2.jpeg" class="snap-center shrink-0 w-80 rounded-3xl shadow-xl">
+
+<img src="public/images/IMG_1061 2.jpeg" class="snap-center shrink-0 w-80 rounded-3xl shadow-xl">
+
+<img src="public/images/IMG_0345.jpeg" class="snap-center shrink-0 w-80 rounded-3xl shadow-xl">
+
+<img src="public/images/IMG_1044.jpeg" class="snap-center shrink-0 w-80 rounded-3xl shadow-xl">
+
+</div>
+
+</section>
+
+<!-- PERSONAL LETTER -->
+
+<section class="py-16 px-5">
+
+<div class="max-w-md mx-auto">
+
+<h2 class="text-center text-4xl font-bold text-pink-500 mb-8">
+A Few Things I Never Say Enough ❤️
+</h2>
+
+<div class="glass rounded-3xl p-8 shadow-xl">
+
+<p class="leading-8 text-gray-700">
+
+My Love,
+
+There are so many things that I don't always say out loud.
+
+Sometimes life gets busy.
+Sometimes words feel too small.
+
+But I want you to know that your presence has changed my life in ways I can never fully explain.
+Kyuki Words kam pard jaate hai or babiu ke liye pyaaar lovely dovely bhard jaata hai ☹️❤️.
+
+You have stood beside me when things weren't easy.
+You believed in me when I doubted myself.
+
+Thank you for every smile,
+every call,
+every message,
+every little effort you make.
+
+Thank you for simply being you.
+
+❤️
+
+My baby shona my jaadu tona , I love you toooo the chanda mama duur keeee and the back
+baby . I know you also Love me a lot [Option ho bhi kaise jayenga pitu hojayegi]
+
+❤️
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- LOVE METER -->
+
+<section class="py-16 px-5">
+
+<div class="max-w-md mx-auto">
+
+<h2 class="text-center text-3xl font-bold text-pink-500 mb-8">
+Love Meter ❤️
+</h2>
+
+<div class="bg-pink-100 h-8 rounded-full overflow-hidden">
+
+<div
+id="loveBar"
+class="progress h-full bg-pink-500 rounded-full">
+</div>
+
+</div>
+
+<p class="text-center mt-4 text-gray-700">
+Infinite Love Loading...
+</p>
+
+</div>
+
+</section>
+
+<!-- LETTER -->
+
+<section class="py-20 px-5">
+
+<div class="max-w-md mx-auto glass rounded-3xl p-8 shadow-xl">
+
+<h2 class="text-center text-4xl text-pink-500 font-bold mb-8">
+A Letter For You ❤️
+</h2>
+
+<p class="leading-8 text-gray-700">
+
+Happy Birthday, My Love.
+
+Today isn't just your birthday.
+
+Today is a reminder that the world became a much better place because you were born.
+
+Thank you for standing beside me when life became difficult.
+
+Thank you for believing in me when I struggled to believe in myself.
+
+Thank you for every smile, every late-night conversation, every hug and every memory.
+
+You are not just my girlfriend.
+
+You are my safe place.
+
+My peace.
+
+My happiness.
+
+And my favorite person.
+
+I hope this year brings you every happiness that your heart deserves.Along with Humara bhot saari baar milna 
+"Inshallah😂🙇🏼‍♂️"
+
+I love you more than words can ever explain.
+
+❤️
+
+Forever Yours.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- SURPRISE -->
+
+<section class="pb-24 px-5">
+
+<div class="max-w-md mx-auto text-center">
+
+<button
+onclick="showSurprise()"
+class="bg-pink-500 text-white px-10 py-4 rounded-full text-lg shadow-xl active:scale-95"
+>
+One Last Surprise ❤️
+</button>
+
+</div>
+
+</section>
+
+<!-- MODAL -->
+
+<div
+id="modal"
+class="hidden fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-6"
+>
+
+<div class="bg-white rounded-3xl p-8 text-center max-w-sm">
+
+<h2 class="text-4xl mb-4">
+🎉
+</h2>
+
+<h3 class="text-2xl font-bold text-pink-500">
+Happy Birthday My Love ❤️
+</h3>
+
+<p class="mt-4 text-gray-600">
+
+No matter where life takes us,
+
+you will always be my favorite person,
+my favorite smile
+and my favorite notification.
+
+❤️
+
+</p>
+
+<button
+onclick="closeModal()"
+class="mt-6 bg-pink-500 text-white px-6 py-3 rounded-full"
+>
+I Love Youuuu ❤️🫂😘🌍
+</button>
+
+</div>
+
+</div>
+
+<script>
+    //Song Play
+    const startBtn = document.getElementById("startBtn");
+const song = document.getElementById("birthdaySong");
+
+startBtn.addEventListener("click", () => {
+
+    document
+      .getElementById("loadingMessage")
+      .classList.remove("hidden");
+
+    song.play();
+
+    setTimeout(() => {
+
+        document
+          .getElementById("loadingMessage")
+          .classList.add("hidden");
+
+        document
+          .getElementById("gallery")
+          .scrollIntoView({
+              behavior: "smooth"
+          });
+
+    }, 2000);
+
+    setTimeout(() => {
+
+        song.pause();
+        song.currentTime = 0;
+
+    }, 25000);
+
+});
+//Songs end
+
+/* Floating Hearts */
+
+for(let i=0;i<40;i++){
+
+let heart=document.createElement('div');
+
+heart.className='heart';
+
+heart.innerHTML=' 🫂 ❤️ ';
+
+heart.style.left=Math.random()*100+'vw';
+
+heart.style.fontSize=
+(15+Math.random()*20)+'px';
+
+heart.style.animationDuration=
+(6+Math.random()*8)+'s';
+
+heart.style.animationDelay=
+Math.random()*8+'s';
+
+document.body.appendChild(heart);
+
+}
+
+/* Love Meter */
+
+window.addEventListener('load',()=>{
+
+setTimeout(()=>{
+
+document.getElementById('loveBar').style.width='100%';
+
+},800);
+
+});
+
+/* Surprise */
+
+function showSurprise(){
+
+document
+.getElementById('modal')
+.classList.remove('hidden');
+
+confetti();
+
+}
+
+function closeModal(){
+
+document
+.getElementById('modal')
+.classList.add('hidden');
+
+}
+
+function confetti(){
+
+for(let i=0;i<60;i++){
+
+let heart=document.createElement('div');
+
+heart.innerHTML=' ❤️ 😘 ';
+
+heart.style.position='fixed';
+
+heart.style.zIndex='999';
+
+heart.style.left=Math.random()*100+'vw';
+
+heart.style.top='-50px';
+
+heart.style.fontSize='25px';
+
+heart.style.transition='5s';
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.style.top='100vh';
+},100);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
